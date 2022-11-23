@@ -10,19 +10,19 @@ dayOfWeek = 'Friday';
 console.log(`I can't wait for ${dayOfWeek}!`);
 
 
-    //Task 2
+    // Task 2
 
-// let animalInput = prompt('What is your favorite animal?');
-// let colorInput = prompt('What is your favorite color?');
-// alert(`I've never seen a ${colorInput} ${animalInput}!`);
+let animalInput = prompt('What is your favorite animal?');
+let colorInput = prompt('What is your favorite color?');
+alert(`I've never seen a ${colorInput} ${animalInput}!`);
 
 
-//Conditionals
-    //Task 1
+// Conditionals
+    // Task 1
 
-//breakfast: blueberry pancakes
-//lunch: sandwich
-//red curry
+// breakfast: blueberry pancakes
+// lunch: sandwich
+// red curry
 
 
 let meal; 
@@ -39,29 +39,22 @@ console.log(meal);
 
 //Task 2
 
-function randomNumber(){
-    let randNum;
-    randNum = Math.floor(Math.random()* 11);
-    switch(randNum){
-        case (randNum >= 0 && randNum <= 2): 
-            console.log('Beatles');
-            break;
-        case (randNum >= 3 && randNum <= 5):
-            console.log('Stones');
-            break;
-        case (randNum >= 5 && randNum <= 8):
-            console.log('Floyd');
-            break;
-        case (randNum >= 9 && randNum <= 10):
-            console.log('Hendrix');
-            break;
-        default: 
-            console.log('None!');
-            break;
-    }
+let randNum;
+randNum = Math.floor(Math.random()* 11);
+if (randNum >= 0 && randNum <= 2){
+    console.log('Beatles');
+}
+else if (randNum >= 3 && randNum <= 5){
+    console.log('Stones');
+}
+else if (randNum >= 5 && randNum <= 8){
+    console.log('Floyd');
+
+}
+else if (randNum >= 9 && randNum <= 10){
+    console.log('Hendrix');
 }
 
-randomNumber();
 
 
 //For Loops
@@ -128,5 +121,30 @@ desktopItems.push('Infinity Gauntlet');
 
 for (item = 0; item < (desktopItems.length); item ++){
     console.log(desktopItems[item])}
+
+
+//Boss Fight
+    //Task 1
+
+let magicNumber = Math.floor(Math.random()*101);
+let guess = 0; 
+
+while (guess != magicNumber){
+    guess = prompt('Guess a number!')
+    if (guess < magicNumber){
+        console.log('Too low!');
+        if (magicNumber - guess <= 10 || magicNumber + guess <= (magicNumber+10)){
+        console.log("Getting Warmer!");
+        }
+    }
+    else if (guess > magicNumber){
+        console.log('Too high!');
+        if (magicNumber - guess <= 10 || magicNumber + guess <= (magicNumber+10)){
+            console.log("Getting Warmer!");
+        }
+    }
+    
+}
+console.log("You got it!")
 
 
